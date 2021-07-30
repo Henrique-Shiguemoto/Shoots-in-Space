@@ -10,6 +10,7 @@ public class MainPlayerMovement : MonoBehaviour
     {
         //Getting the boundaries of the screen in world space
         screenBoundariesInWorldSpace = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
+        Debug.Log(screenBoundariesInWorldSpace);
     }
     void Update()
     {
