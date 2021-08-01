@@ -1,12 +1,12 @@
 using UnityEngine;
 
-public class EnemyMovement : MonoBehaviour
+public class Enemy1Movement : MonoBehaviour
 {
     private Vector3 cameraPosition;
     private float cameraSpeed;
     private float enemySpeed;
 
-    //Value in (0f, 1f)
+    //Value multiplier in (0f, 1f), will down scale the enemy speed in relation to the camera
     public float enemySpeedDownScale;
     void Start()
     {
