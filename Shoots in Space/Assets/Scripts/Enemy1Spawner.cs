@@ -33,4 +33,9 @@ public class Enemy1Spawner : MonoBehaviour
             Instantiate(enemy1GameObject, enemy1GameObject.transform.position, Quaternion.identity);
         }
     }
+
+    void Update()
+    {
+        //needs timer
+    }
 }

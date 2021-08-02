@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6354645456690837173}
   - component: {fileID: 6354645456690837171}
   - component: {fileID: 4152497177252015923}
+  - component: {fileID: 7032360470548161594}
   m_Layer: 0
   m_Name: SpaceShip
   m_TagString: MainPlayer
@@ -137,3 +138,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spaceShipShot: {fileID: 1443361979579455776, guid: 1703ce7696c3b9d40a6e7a9d643f068f, type: 3}
+--- !u!114 &7032360470548161594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6354645456690837174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66564371fadf60e448d11cfd6056a643, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthText: {fileID: 4944195471153713655, guid: d28443eebd1dd5e4dac04d78999d49bd, type: 3}
+  maxMainPlayerHealth: 10
