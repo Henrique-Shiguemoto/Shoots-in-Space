@@ -5,11 +5,17 @@ public class Enemy1CollisionChecking : MonoBehaviour
     //Private variables
     private const int ENEMY_SCORE_POINT = 10;
     private HealthSystem enemyHealth;
+    private Enemy1Spawner enemy1Spawner;
     [SerializeField] private int maxHealthEnemy;
 
     void Awake()
     {
         enemyHealth = new HealthSystem(maxHealthEnemy);
+    }
+
+    void Start()
+    {
+        enemy1Spawner = GameObject.Find("EnemySpawner").GetComponent<Enemy1Spawner>();
     }
 
     void OnTriggerEnter2D(Collider2D collider)
@@ -22,6 +28,8 @@ public class Enemy1CollisionChecking : MonoBehaviour
                 Destroy(gameObject);
                 //Update score text
                 Score.score += ENEMY_SCORE_POINT;
+                //Updating enemy wave count
+                enemy1Spawner.waveEnemyCount--;
             }
         }
     }

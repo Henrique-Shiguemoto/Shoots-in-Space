@@ -43,5 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86734a66a0eeea74aa907b8d34040e3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveEnemyCount: 5
   enemy1GameObject: {fileID: 6450173235877850268, guid: ff44b149d5bdf534db3b9228dd45e9c8, type: 3}
+  initialWaveEnemyCount: 5
+  waveEnemyCount: 5
