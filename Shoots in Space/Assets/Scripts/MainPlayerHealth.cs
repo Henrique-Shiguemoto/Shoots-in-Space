@@ -19,7 +19,7 @@ public class MainPlayerHealth : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collider)
     {
         //If player hits an enemy, it gets damaged and loses 1 health (hard coded for now)
-        if(collider.gameObject.CompareTag("Enemy")){
+        if(collider.gameObject.CompareTag("Enemy") || collider.gameObject.CompareTag("EnemyShot")){
             mainPlayerHealth.DealDamage(1);
             healthText.text = "Health:" + mainPlayerHealth.Health.ToString(); 
         }

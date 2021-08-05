@@ -217,8 +217,8 @@ Transform:
   m_LocalPosition: {x: 0, y: -2.5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1059106330}
   - {fileID: 1958385967}
+  - {fileID: 1059106330}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1135,7 +1135,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6354645456690837172, guid: 7d2a82bf24d24be49a86e9df93e6d372, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6354645456690837172, guid: 7d2a82bf24d24be49a86e9df93e6d372, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1177,9 +1177,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6354645456690837173, guid: 7d2a82bf24d24be49a86e9df93e6d372, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6354645456690837174, guid: 7d2a82bf24d24be49a86e9df93e6d372, type: 3}
       propertyPath: m_Name
       value: SpaceShip
+      objectReference: {fileID: 0}
+    - target: {fileID: 6354645456690837174, guid: 7d2a82bf24d24be49a86e9df93e6d372, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6354645456690837175, guid: 7d2a82bf24d24be49a86e9df93e6d372, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6354645456690837175, guid: 7d2a82bf24d24be49a86e9df93e6d372, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7032360470548161594, guid: 7d2a82bf24d24be49a86e9df93e6d372, type: 3}
       propertyPath: healthText
@@ -1194,12 +1210,24 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 519420032}
     m_Modifications:
+    - target: {fileID: 3848249937572875389, guid: 601c27ae20eae184e8037d33e60d7629, type: 3}
+      propertyPath: waveEnemyCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3848249937572875389, guid: 601c27ae20eae184e8037d33e60d7629, type: 3}
+      propertyPath: initialWaveEnemyCount
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8207489924465737942, guid: 601c27ae20eae184e8037d33e60d7629, type: 3}
       propertyPath: m_Name
       value: EnemySpawner
       objectReference: {fileID: 0}
     - target: {fileID: 8207489924465737943, guid: 601c27ae20eae184e8037d33e60d7629, type: 3}
       propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8207489924465737943, guid: 601c27ae20eae184e8037d33e60d7629, type: 3}
+      propertyPath: m_LocalScale.x
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8207489924465737943, guid: 601c27ae20eae184e8037d33e60d7629, type: 3}
@@ -1208,7 +1236,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8207489924465737943, guid: 601c27ae20eae184e8037d33e60d7629, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.5
+      value: 5.5
       objectReference: {fileID: 0}
     - target: {fileID: 8207489924465737943, guid: 601c27ae20eae184e8037d33e60d7629, type: 3}
       propertyPath: m_LocalPosition.z

@@ -2,21 +2,21 @@ using UnityEngine;
 
 public class ShotMovement : MonoBehaviour
 {
-    public float shotSpeedY;
-    private Vector2 screenBoundariesInWorldSpace;
+    [SerializeField] private float shotSpeedY;
+    private Vector3 cameraPosition;
 
     void Start()
     {
-        screenBoundariesInWorldSpace = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
+        cameraPosition = Camera.main.transform.position;
     }
 
     void Update()
     {
-        screenBoundariesInWorldSpace = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
+        cameraPosition = Camera.main.transform.position;
 
         transform.position += new Vector3(0f, 1f, 0f) * Time.deltaTime * shotSpeedY;
 
-        if(transform.position.y > screenBoundariesInWorldSpace.y){
+        if(transform.position.y > cameraPosition.y + 7f){
             Destroy(gameObject);
         }
     }

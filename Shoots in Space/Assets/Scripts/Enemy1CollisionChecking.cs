@@ -22,7 +22,13 @@ public class Enemy1CollisionChecking : MonoBehaviour
     {
         //If an enemy collides with the player shot or the main player, it gets damaged by 1
         if(collider.gameObject.CompareTag("PlayerShot") || collider.gameObject.CompareTag("MainPlayer")){
-            enemyHealth.DealDamage(1);
+            int damageAmount = 0;
+            if(collider.gameObject.CompareTag("PlayerShot")){
+                damageAmount = 2;
+            }else{
+                damageAmount = 1;
+            }
+            enemyHealth.DealDamage(damageAmount);
             if(enemyHealth.Health == 0){
                 //Enemy Death
                 Destroy(gameObject);

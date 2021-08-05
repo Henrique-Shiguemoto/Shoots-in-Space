@@ -13,7 +13,7 @@ public class Enemy1Spawner : MonoBehaviour
 
     //Public variables
     public int initialWaveEnemyCount;
-    public int waveEnemyCount;
+    [HideInInspector] public int waveEnemyCount;
 
     void Start()
     {
@@ -24,7 +24,7 @@ public class Enemy1Spawner : MonoBehaviour
                                                                                   Camera.main.transform.position.z));
         cameraInitialPosition = Camera.main.transform.position;
 
-        SpawnEnemies(initialWaveEnemyCount, 9f, 16f);
+        SpawnEnemies(initialWaveEnemyCount, transform.position.y + 6f, transform.position.y + 13f);
     }
 
     void Update()
@@ -41,7 +41,7 @@ public class Enemy1Spawner : MonoBehaviour
         //Spawning initialWaveEnemyCount enemies in a random position outside the camera view
         for(int i = 0; i < initialWaveEnemyCount; i++){
             //Calculating random position offset values
-            xOffset = Random.Range(-screenBoundariesInWorldSpace.x, screenBoundariesInWorldSpace.x);
+            xOffset = Random.Range(-screenBoundariesInWorldSpace.x + 3f, screenBoundariesInWorldSpace.x - 3f);
             yOffset = Random.Range(yOffset1, yOffset2);
 
             //Setting the offset position
