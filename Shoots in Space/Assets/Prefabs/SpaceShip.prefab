@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6354645456690837171}
   - component: {fileID: 4152497177252015923}
   - component: {fileID: 7032360470548161594}
+  - component: {fileID: -1212110964914672275}
   m_Layer: 0
   m_Name: SpaceShip
   m_TagString: MainPlayer
@@ -152,3 +153,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthText: {fileID: 4944195471153713655, guid: d28443eebd1dd5e4dac04d78999d49bd, type: 3}
   maxMainPlayerHealth: 10
+  animator: {fileID: -1212110964914672275}
+--- !u!95 &-1212110964914672275
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6354645456690837174}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a6c2d4a2a33127d4ea5125c33cc9b758, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

@@ -1,44 +1,39 @@
 using UnityEngine;
 
-public class Enemy1CollisionChecking : MonoBehaviour
+public class Enemy2CollisionChecking : MonoBehaviour
 {
-    //Private variables
-    private const int ENEMY_SCORE_POINT = 10;
+    private const int ENEMY_SCORE_POINT = 20;
     private HealthSystem enemyHealth;
-    private Enemy1Spawner enemy1Spawner;
-    [SerializeField] private int maxHealthEnemy;
+    private Enemy2Spawner enemy2Spawner;
+    [SerializeField] private int enemyMaxHealth;
     [SerializeField] private Animator animator;
 
     void Awake()
     {
-        enemyHealth = new HealthSystem(maxHealthEnemy);
+        enemyHealth = new HealthSystem(enemyMaxHealth);
     }
 
     void Start()
     {
-        enemy1Spawner = GameObject.Find("EnemySpawner").GetComponent<Enemy1Spawner>();
+        enemy2Spawner = GameObject.Find("EnemySpawner").GetComponent<Enemy2Spawner>();
     }
 
     void OnTriggerEnter2D(Collider2D collider)
     {
-        //If an enemy collides with the player shot or the main player, it gets damaged by 1
         if(collider.gameObject.CompareTag("PlayerShot") || collider.gameObject.CompareTag("MainPlayer")){
-            int damageAmount = 0;
+            int damageDealt;
             if(collider.gameObject.CompareTag("PlayerShot")){
-                damageAmount = 2;
+                damageDealt = 2;
             }else{
-                damageAmount = 1;
+                damageDealt = 1;
             }
-            enemyHealth.DealDamage(damageAmount);
+            enemyHealth.DealDamage(damageDealt);
             if(enemyHealth.Health == 0){
                 FindObjectOfType<AudioManager>().PlaySound("EnemyExplosion");
                 animator.SetTrigger("TriggerExplosion"); //need to wait for the animation to destroy
-                //Enemy Death
                 Destroy(gameObject);
-                //Update score text
                 Score.score += ENEMY_SCORE_POINT;
-                //Updating enemy wave count
-                enemy1Spawner.waveEnemyCount--;
+                enemy2Spawner.waveEnemyCount--;
             }
         }
     }

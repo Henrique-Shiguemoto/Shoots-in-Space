@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Enemy1ShotMovement : MonoBehaviour
+public class EnemyShotMovement : MonoBehaviour
 {
     [SerializeField] private float shotSpeedMultiplier;
     private Vector2 screenBoundariesInWorldSpace;

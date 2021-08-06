@@ -8,6 +8,7 @@ public class MainPlayerHealth : MonoBehaviour
 
     //private variables
     [SerializeField] private int maxMainPlayerHealth;
+    [SerializeField] private Animator animator;
     private HealthSystem mainPlayerHealth;
 
     void Awake()
@@ -20,8 +21,13 @@ public class MainPlayerHealth : MonoBehaviour
     {
         //If player hits an enemy, it gets damaged and loses 1 health (hard coded for now)
         if(collider.gameObject.CompareTag("Enemy") || collider.gameObject.CompareTag("EnemyShot")){
+            FindObjectOfType<AudioManager>().PlaySound("SpaceShipHurt");
             mainPlayerHealth.DealDamage(1);
-            healthText.text = "Health:" + mainPlayerHealth.Health.ToString(); 
+            healthText.text = "Health:" + mainPlayerHealth.Health.ToString();
+            if(mainPlayerHealth.Health <= 0){
+                animator.SetTrigger("TriggerExplosion"); //need to wait for the animation to destroy
+                Destroy(gameObject);
+            }
         }
     }
 }

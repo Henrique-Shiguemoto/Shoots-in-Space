@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8207489924465737943}
   - component: {fileID: 3848249937572875389}
+  - component: {fileID: -1829998751409983499}
   m_Layer: 0
   m_Name: EnemySpawner
   m_TagString: Untagged
@@ -46,3 +47,18 @@ MonoBehaviour:
   enemy1GameObject: {fileID: 6450173235877850268, guid: ff44b149d5bdf534db3b9228dd45e9c8, type: 3}
   initialWaveEnemyCount: 5
   waveEnemyCount: 5
+--- !u!114 &-1829998751409983499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8207489924465737942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af01a9c3917e64842bb632c210dc1530, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy2GameObject: {fileID: 3978307313851389589, guid: c61db8a92b650994fb65616bbff13861, type: 3}
+  initialWaveEnemyCount: 2
+  waveEnemyCount: 0

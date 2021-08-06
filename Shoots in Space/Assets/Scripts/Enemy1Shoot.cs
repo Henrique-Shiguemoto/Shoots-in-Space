@@ -22,6 +22,7 @@ public class Enemy1Shoot : MonoBehaviour
            transform.position.y >= -screenBoundariesInWorldSpace.y){
 
             if(Time.time >= nextTimeToShoot){
+                FindObjectOfType<AudioManager>().PlaySound("EnemyShot");
                 Vector3 shotPosition = transform.position + new Vector3(0f, -0.35f, 0f);
                 Instantiate(enemy1shot, shotPosition, Quaternion.identity);
                 nextTimeToShoot = Time.time + TIME_BETWEEN_SHOTS;

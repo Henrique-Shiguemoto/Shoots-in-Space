@@ -5,9 +5,6 @@ public class Enemy1Spawner : MonoBehaviour
     //private variables
     private Vector3 cameraInitialPosition;
     private Vector2 screenBoundariesInWorldSpace;
-    private Vector3 offsetSpawnPosition; //Random offset position in relation to the camera
-    private float xOffset;
-    private float yOffset;
     //private float waitTimerForNextWave = 4f; //Wait time for the next wave
     [SerializeField] private GameObject enemy1GameObject;
 
@@ -18,13 +15,14 @@ public class Enemy1Spawner : MonoBehaviour
     void Start()
     {
         waveEnemyCount = initialWaveEnemyCount;
+        
+        cameraInitialPosition = Camera.main.transform.position;
 
         //We need the screen boundaries in world space so we can limit the X spawn position of the enemy
         screenBoundariesInWorldSpace = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 
-                                                                                  Camera.main.transform.position.z));
-        cameraInitialPosition = Camera.main.transform.position;
+                                                                                  cameraInitialPosition.z));
 
-        SpawnEnemies(initialWaveEnemyCount, transform.position.y + 6f, transform.position.y + 13f);
+        SpawnEnemies(initialWaveEnemyCount, transform.position.y + 10f, transform.position.y + 17f);
     }
 
     void Update()
@@ -38,6 +36,9 @@ public class Enemy1Spawner : MonoBehaviour
 
     void SpawnEnemies(int initialWaveEnemyCount, float yOffset1, float yOffset2)
     {
+        float xOffset;
+        float yOffset;
+        Vector3 offsetSpawnPosition; //Random offset position in relation to the camera
         //Spawning initialWaveEnemyCount enemies in a random position outside the camera view
         for(int i = 0; i < initialWaveEnemyCount; i++){
             //Calculating random position offset values
