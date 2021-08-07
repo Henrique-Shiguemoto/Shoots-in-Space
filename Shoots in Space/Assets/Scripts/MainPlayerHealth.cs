@@ -26,8 +26,13 @@ public class MainPlayerHealth : MonoBehaviour
             healthText.text = "Health:" + mainPlayerHealth.Health.ToString();
             if(mainPlayerHealth.Health <= 0){
                 animator.SetTrigger("TriggerExplosion"); //need to wait for the animation to destroy
-                Destroy(gameObject);
+                gameObject.GetComponent<Collider2D>().enabled = false;
+                Invoke("Kill", 1.2f);
             }
         }
+    }
+
+    void Kill(){
+        Destroy(gameObject);
     }
 }

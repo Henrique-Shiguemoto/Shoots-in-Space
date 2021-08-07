@@ -139,6 +139,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spaceShipShot: {fileID: 1443361979579455776, guid: 1703ce7696c3b9d40a6e7a9d643f068f, type: 3}
+  specialAbilityShot: {fileID: 2493572654768697565, guid: ea06f997475b5284dada473fc5d024fd, type: 3}
+  cooldownText: {fileID: 8945463444038378009, guid: dd08d450301521d4d937c76f344c67a7, type: 3}
 --- !u!114 &7032360470548161594
 MonoBehaviour:
   m_ObjectHideFlags: 0
