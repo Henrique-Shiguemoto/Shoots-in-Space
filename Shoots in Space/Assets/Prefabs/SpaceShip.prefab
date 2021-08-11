@@ -140,7 +140,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spaceShipShot: {fileID: 1443361979579455776, guid: 1703ce7696c3b9d40a6e7a9d643f068f, type: 3}
   specialAbilityShot: {fileID: 2493572654768697565, guid: ea06f997475b5284dada473fc5d024fd, type: 3}
-  cooldownText: {fileID: 8945463444038378009, guid: dd08d450301521d4d937c76f344c67a7, type: 3}
 --- !u!114 &7032360470548161594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,6 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthText: {fileID: 4944195471153713655, guid: d28443eebd1dd5e4dac04d78999d49bd, type: 3}
+  gameOverText: {fileID: 6256546848228988590, guid: 6710250845a2793439c7c6cf7957abb8, type: 3}
   maxMainPlayerHealth: 10
   animator: {fileID: -1212110964914672275}
 --- !u!95 &-1212110964914672275

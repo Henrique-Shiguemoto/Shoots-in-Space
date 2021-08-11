@@ -45,8 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy1GameObject: {fileID: 6450173235877850268, guid: ff44b149d5bdf534db3b9228dd45e9c8, type: 3}
-  initialWaveEnemyCount: 5
-  waveEnemyCount: 5
+  initialWaveEnemyCount: 0
+  waveEnemyCount: 3
 --- !u!114 &-1829998751409983499
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -7,6 +7,8 @@ public class MainPlayerHealth : MonoBehaviour
     public TextMeshProUGUI healthText;
 
     //private variables
+    //[SerializeField] private TextMeshProUGUI gameOverText;
+    [SerializeField] private GameObject gameOverUI;
     [SerializeField] private int maxMainPlayerHealth;
     [SerializeField] private Animator animator;
     private HealthSystem mainPlayerHealth;
@@ -25,8 +27,10 @@ public class MainPlayerHealth : MonoBehaviour
             mainPlayerHealth.DealDamage(1);
             healthText.text = "Health:" + mainPlayerHealth.Health.ToString();
             if(mainPlayerHealth.Health <= 0){
-                animator.SetTrigger("TriggerExplosion"); //need to wait for the animation to destroy
+                animator.SetTrigger("TriggerExplosion");
                 gameObject.GetComponent<Collider2D>().enabled = false;
+                gameOverUI.SetActive(true);
+                //gameOverText.text = "GAME OVER"; //Showing game over text
                 Invoke("Kill", 1.2f);
             }
         }

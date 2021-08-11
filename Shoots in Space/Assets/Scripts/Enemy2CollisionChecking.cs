@@ -37,6 +37,7 @@ public class Enemy2CollisionChecking : MonoBehaviour
                 FindObjectOfType<AudioManager>().PlaySound("EnemyExplosion");
                 animator.SetTrigger("TriggerExplosion"); //need to wait for the animation to destroy
                 enemyCollider.enabled = false;
+                gameObject.GetComponent<Enemy2Shoot>().enabled = false;
                 Invoke("Kill", 1.2f);
                 Score.score += ENEMY_SCORE_POINT;
                 enemy2Spawner.waveEnemyCount--;

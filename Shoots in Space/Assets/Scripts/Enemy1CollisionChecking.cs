@@ -40,6 +40,8 @@ public class Enemy1CollisionChecking : MonoBehaviour
                 animator.SetTrigger("TriggerExplosion");
                 //Disable collider first
                 enemyCollider.enabled = false;
+                //Deactivate shooting
+                gameObject.GetComponent<Enemy1Shoot>().enabled = false;
                 Invoke("Kill", 1.2f);
                 //Update score text
                 Score.score += ENEMY_SCORE_POINT;
