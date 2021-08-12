@@ -16,6 +16,11 @@ public class AudioManager : MonoBehaviour
             sound.audioSource.loop = sound.looping;
         }
     }
+
+    void Start()
+    {
+        PlaySound("LevelSong");
+    }
     
     public bool PlaySound(string name){
         foreach(SoundClip sound in soundClips){

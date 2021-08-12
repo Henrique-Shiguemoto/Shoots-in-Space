@@ -1023,30 +1023,42 @@ MonoBehaviour:
     volume: 0.1
     pitch: 0.5
     looping: 0
+    startOnPlay: 0
     audioSource: {fileID: 0}
   - soundClip: {fileID: 8300000, guid: 18c0e2b3673b3af4e84a16efe472e641, type: 3}
     soundName: SpaceShipHurt
     volume: 0.15
     pitch: 1
     looping: 0
+    startOnPlay: 0
     audioSource: {fileID: 0}
   - soundClip: {fileID: 8300000, guid: 21651a2ae125ea144b2a0dcc980ddac8, type: 3}
     soundName: LazerShot
     volume: 0.05
     pitch: 0.9
     looping: 0
+    startOnPlay: 0
     audioSource: {fileID: 0}
   - soundClip: {fileID: 8300000, guid: b0fcd80583d82574fad69fdfaaa7e2af, type: 3}
     soundName: SpecialAbility
     volume: 0.2
     pitch: 1
     looping: 0
+    startOnPlay: 0
     audioSource: {fileID: 0}
   - soundClip: {fileID: 8300000, guid: be148832ebe5eb8418525cfc5efc1486, type: 3}
     soundName: EnemyShot
     volume: 1
     pitch: 1
     looping: 0
+    startOnPlay: 0
+    audioSource: {fileID: 0}
+  - soundClip: {fileID: 8300000, guid: b47b56a728d1dd243b7c09362f2f54df, type: 3}
+    soundName: LevelSong
+    volume: 1
+    pitch: 1
+    looping: 1
+    startOnPlay: 1
     audioSource: {fileID: 0}
 --- !u!224 &1426297515 stripped
 RectTransform:
